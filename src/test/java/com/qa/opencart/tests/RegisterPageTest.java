@@ -2,6 +2,9 @@ package com.qa.opencart.tests;
 
 import com.qa.opencart.baseTest.BaseTest;
 import com.qa.opencart.constants.Constants;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -19,6 +22,8 @@ public class RegisterPageTest extends BaseTest {
     }
 
     @Test
+    @Description("Verify register page title")
+    @Severity(SeverityLevel.MINOR)
     public void getRegisterPageTitle(){
         String title = registerPage.getRegisterPageTitle();
         Assert.assertEquals(title, Constants.REGISTER_PAGE_TITLE);
@@ -30,7 +35,8 @@ public class RegisterPageTest extends BaseTest {
         System.out.println((myTestDataArr).size());
         return myTestDataArr.iterator();
     }
-
+    @Description("Verify creating multiple accounts")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "getRegnTestData")
     public void registerNewAccounts(String fName, String lName, String telephone, String pwd, String subscribe){
         registerPage.doRegister(fName, lName, telephone, pwd, subscribe);

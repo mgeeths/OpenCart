@@ -15,6 +15,7 @@ build/
 *.nar
 hs_err_pid*
 activityLog.log
+OpenCart.log
 debug.log
 ##############################
 ## Maven

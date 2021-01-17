@@ -1,6 +1,7 @@
 package com.qa.opencart.pages;
 
 import com.qa.opencart.utils.ElemUtils;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -31,6 +32,7 @@ public class LoginPage {
         return driver.getCurrentUrl();
     }
 
+    @Step("Login with username {0} and password {1}")
     public AccountPage doLogin(String uName, String pwd) throws InterruptedException {
         elemUtils.doSendKeys(uNameLoc,uName);
         elemUtils.doSendKeys(passwordLoc,pwd);
@@ -39,6 +41,7 @@ public class LoginPage {
         return new AccountPage(driver);
     }
 
+    @Step("Navigate to forgot pwd page")
     public  ForgotPwdPage goToForgotPwdPage(){
         elemUtils.doClick(forgotPwdLinkLoc);
         return new ForgotPwdPage(driver);

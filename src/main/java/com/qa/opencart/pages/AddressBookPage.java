@@ -1,17 +1,15 @@
 package com.qa.opencart.pages;
 
-import com.qa.opencart.driverFactory.DriverFactory;
 import com.qa.opencart.utils.ElemUtils;
 import org.openqa.selenium.WebDriver;
 
-public class EditAccountPage {
-
-    //Class var
+public class AddressBookPage {
+    //class var
     private WebDriver driver;
     private ElemUtils elemUtils;
 
     //Constructor
-    public EditAccountPage(WebDriver driver){
+    public AddressBookPage(WebDriver driver){
         this.driver = driver;
         this.elemUtils = new ElemUtils(driver);
     }
@@ -19,9 +17,5 @@ public class EditAccountPage {
     //Page Actions
     public String getPageTitle(){
         return driver.getTitle();
-    }
-
-    public void sampleMethod(){
-        System.out.println("My text");
     }
 }

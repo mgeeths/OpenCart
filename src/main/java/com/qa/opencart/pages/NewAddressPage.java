@@ -62,4 +62,7 @@ public class NewAddressPage {
         else{return false;}
     }
 
+    public void editAddress(){
+        System.out.println("Edit the address line 1 data");
+    }
 }

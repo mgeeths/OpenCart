@@ -3,13 +3,13 @@ package com.qa.opencart.pages;
 import com.qa.opencart.utils.ElemUtils;
 import org.openqa.selenium.WebDriver;
 
-public class AddressBookPage {
+public class AddressPage {
     //class var
     private WebDriver driver;
     private ElemUtils elemUtils;
 
     //Constructor
-    public AddressBookPage(WebDriver driver){
+    public AddressPage(WebDriver driver){
         this.driver = driver;
         this.elemUtils = new ElemUtils(driver);
     }

@@ -68,6 +68,11 @@ public class ElemUtils {
         select.selectByIndex(index);
     }
 
+    public void selectDropdownByValue(By loc, String value){
+        Select select = new Select(getElement(loc));
+        select.selectByValue(value);
+    }
+
     public void mouseOver(By loc){
         Actions actions = new Actions(driver);
         actions.moveToElement(getElement(loc)).perform();

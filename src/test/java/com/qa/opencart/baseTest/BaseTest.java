@@ -23,6 +23,7 @@ public class BaseTest {
     public ProductInfoPage productInfoPage;
     public RegisterPage registerPage;
     public TestDataProvider testDataProvider;
+    public NewAddressPage newAddressPage;
 
     @BeforeTest
     public void setUp() throws Exception {
@@ -41,6 +42,7 @@ public class BaseTest {
         productInfoPage = new ProductInfoPage(driver);
         registerPage = new RegisterPage(driver);
         testDataProvider = new TestDataProvider();
+        newAddressPage = new NewAddressPage(driver);
     }
 
     @AfterTest

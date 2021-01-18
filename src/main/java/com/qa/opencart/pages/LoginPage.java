@@ -16,6 +16,8 @@ public class LoginPage {
     private By passwordLoc = By.id("input-password");
     private By forgotPwdLinkLoc = By.cssSelector(".form-group>a");
     private By loginBtnLoc = By.cssSelector("input.btn-primary");
+    private By addressBookLink = By.linkText("Address Book");
+    private By newAddressLink = By.linkText("New Address");
 
     //Constructor
     public LoginPage(WebDriver driver){
@@ -45,5 +47,14 @@ public class LoginPage {
     public  ForgotPwdPage goToForgotPwdPage(){
         elemUtils.doClick(forgotPwdLinkLoc);
         return new ForgotPwdPage(driver);
+    }
+
+    public  void goToAddressPage(){
+        elemUtils.doClick(addressBookLink);
+    }
+
+    public NewAddressPage goToNewAddressPage(){
+        elemUtils.doClick(newAddressLink);
+        return new NewAddressPage(driver);
     }
 }

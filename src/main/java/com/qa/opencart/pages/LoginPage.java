@@ -2,6 +2,7 @@ package com.qa.opencart.pages;
 
 import com.qa.opencart.utils.ElemUtils;
 import io.qameta.allure.Step;
+import org.apache.commons.math3.analysis.function.Add;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -35,11 +36,10 @@ public class LoginPage {
     }
 
     @Step("Login with username {0} and password {1}")
-    public AccountPage doLogin(String uName, String pwd) throws InterruptedException {
+    public AccountPage doLogin(String uName, String pwd) {
         elemUtils.doSendKeys(uNameLoc,uName);
         elemUtils.doSendKeys(passwordLoc,pwd);
         elemUtils.doClick(loginBtnLoc);
-        Thread.sleep(2000);
         return new AccountPage(driver);
     }
 
@@ -49,8 +49,9 @@ public class LoginPage {
         return new ForgotPwdPage(driver);
     }
 
-    public  void goToAddressPage(){
+    public AddressPage goToAddressPage(){
         elemUtils.doClick(addressBookLink);
+        return new AddressPage(driver);
     }
 
     public NewAddressPage goToNewAddressPage(){

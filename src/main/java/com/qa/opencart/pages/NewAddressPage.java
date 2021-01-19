@@ -24,6 +24,7 @@ public class NewAddressPage {
     private By regionField = By.id("input-zone");
     private By regionDropdown = By.xpath("//select[@id='input-zone']");
     private By defaultYesBtn = By.cssSelector("input[type='radio'][value='1']");
+    private By defaultNoBtn = By.cssSelector("input[type='radio'][value='0']");
     private By continueBtn =  By.cssSelector("input[type='submit'][value='Continue']");
     private By successMsgAlert = By.cssSelector("div.alert-success");
 
@@ -53,7 +54,7 @@ public class NewAddressPage {
         Thread.sleep(1000);
         elemUtils.selectDropdownByVisibleText(regionDropdown,"Balkh");
         Thread.sleep(1000);
-        elemUtils.doClick(defaultYesBtn);
+        elemUtils.doClick(defaultNoBtn);
         elemUtils.doClick(continueBtn);
         Thread.sleep(2000);
         if(elemUtils.getTextOfEle(successMsgAlert).contains("successfully added")){

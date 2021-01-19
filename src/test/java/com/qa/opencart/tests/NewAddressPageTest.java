@@ -6,15 +6,15 @@ import org.testng.annotations.Test;
 
 public class NewAddressPageTest extends BaseTest {
 
-    @BeforeClass
-    public void setUpAddressPage() throws InterruptedException {
+    @BeforeClass(enabled = false)
+    public void setUpAddressPage() {
         homePage.goToLoginPage();
         loginPage.doLogin(prop.getProperty("username"),prop.getProperty("password"));
         loginPage.goToAddressPage();
         loginPage.goToNewAddressPage();
     }
 
-    @Test
+    @Test(enabled = false)
     public void createNewAddressTest() throws InterruptedException {
         newAddressPage.createNewAddress();
     }

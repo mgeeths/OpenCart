@@ -157,5 +157,13 @@ public class ElemUtils {
         wait.until(ExpectedConditions.presenceOfElementLocated(loc));
     }
 
+    public void waitForInvisibiltyOfElement(By loc){
+        wait = new WebDriverWait(driver,Duration.ofSeconds(2));
+        wait.until(ExpectedConditions.invisibilityOf(getElement(loc)));
+    }
 
+    public void waitForInvisibiltyOfElement1(String partUrl){
+        wait = new WebDriverWait(driver,Duration.ofSeconds(2));
+        wait.until(ExpectedConditions.urlContains(partUrl));
+    }
 }

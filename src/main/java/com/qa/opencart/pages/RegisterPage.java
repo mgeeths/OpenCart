@@ -65,7 +65,6 @@ public class RegisterPage {
         elemUtils.doClick(logoutLoc);
         elemUtils.waitForPageTitle(Constants.LOGOUT_PAGE_TITLE);
         elemUtils.mouseOver(myAccountLinkLoc);
-        //Thread.sleep(2000);
     }
 
 }

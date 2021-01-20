@@ -47,16 +47,12 @@ public class NewAddressPage {
         elemUtils.doSendKeys(address1Field,"252, Elsa ln");
         elemUtils.doSendKeys(cityField,"Ontorio");
         elemUtils.doClick(countryField);
-        Thread.sleep(1000);
         elemUtils.selectDropdownByValue(countryFieldDropdown,"1");
         elemUtils.doSendKeys(postCodeField,"356987");
         elemUtils.doClick(regionField);
-        Thread.sleep(1000);
         elemUtils.selectDropdownByVisibleText(regionDropdown,"Balkh");
-        Thread.sleep(1000);
         elemUtils.doClick(defaultNoBtn);
         elemUtils.doClick(continueBtn);
-        Thread.sleep(2000);
         if(elemUtils.getTextOfEle(successMsgAlert).contains("successfully added")){
             return true;
         }

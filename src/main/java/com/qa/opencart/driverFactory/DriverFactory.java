@@ -2,6 +2,7 @@ package com.qa.opencart.driverFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -23,17 +24,45 @@ public class DriverFactory {
     private Properties prop;
     public static String highlight;
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(DriverFactory.class));
     OptionsManager optionsManager;
 
     //Class Methods
-    public Properties init_prop(){
+    public Properties init_prop() {
         prop = new Properties();
+        FileInputStream ip = null;
+        String env = System.getProperty("env");
+        System.out.println("Test ran on environment : " + env);
+        LOGGER.info("Test ran on environment : " + env);
+        if(env == null){
+            try {
+                ip = new FileInputStream(".\\src\\resources\\config\\config.qa.properties");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }else {
+            try {
+                switch (env) {
+                    case "qa":
+                        ip = new FileInputStream(".\\src\\resources\\config\\config.qa.properties");
+                        break;
+                    case "stage":
+                        ip = new FileInputStream(".\\src\\resources\\config\\config.stage.properties");
+                        break;
+                    case "preProd":
+                        ip = new FileInputStream(".\\src\\resources\\config\\config.preProd.properties");
+                        break;
+                    default:
+                        break;
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                LOGGER.info("File not found at the given location");
+            }
+        }
         try {
-            FileInputStream ip =
-                    new FileInputStream("C:\\Users\\browse\\Automation\\AutomateOpencart\\src\\resources\\config\\config.properties");
             prop.load(ip);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            return prop;
         } catch (IOException e) {
             e.printStackTrace();
         }

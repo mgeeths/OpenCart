@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Shop Cart Test automtion regression suite"
+       thread-count="3" parallel="tests" verbose="3">
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="version" value="85"></parameter>
+    <listeners>
+        <listener
+                class-name="com.qa.opencart.listeners.ExtentReportListener" />
+        <listener
+                class-name="com.qa.opencart.listeners.AllureListener" />
+    </listeners>
+    <suite-files>
+        <suite-file path="testNG_FF_83.xml"></suite-file>
+        <suite-file path="testNG_CH_85.xml"></suite-file>
+    </suite-files>
+
+</suite>
+
+
+
+

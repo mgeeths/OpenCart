@@ -148,22 +148,22 @@ public class ElemUtils {
 
     //Explicit Wait Methods
     public void waitForPageTitle(String title){
-        wait = new WebDriverWait(driver,Duration.ofSeconds(2));
+        wait = new WebDriverWait(driver,2);
         wait.until(ExpectedConditions.titleIs(title));
     }
 
     public void waitForPresenceOfElement(By loc){
-        wait = new WebDriverWait(driver,Duration.ofSeconds(2));
+        wait = new WebDriverWait(driver,2);
         wait.until(ExpectedConditions.presenceOfElementLocated(loc));
     }
 
     public void waitForInvisibiltyOfElement(By loc){
-        wait = new WebDriverWait(driver,Duration.ofSeconds(2));
+        wait = new WebDriverWait(driver,2);
         wait.until(ExpectedConditions.invisibilityOf(getElement(loc)));
     }
 
     public void waitForInvisibiltyOfElement1(String partUrl){
-        wait = new WebDriverWait(driver,Duration.ofSeconds(2));
+        wait = new WebDriverWait(driver,2);
         wait.until(ExpectedConditions.urlContains(partUrl));
     }
 }

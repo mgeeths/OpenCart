@@ -28,6 +28,7 @@ public class HomePage {
     private By loginTabLoc = By.linkText("Login");
     private By registerTabLoc = By.linkText("Register");
     private By logoutLoc = By.linkText("Logout");
+    private By searchPageHeader = By.xpath("//h1[contains(text(),'Search')]");
 
     //constructor
     public HomePage(WebDriver driver){
@@ -50,6 +51,7 @@ public class HomePage {
         elemUtils.doSendKeys(searchFieldLoc, prodName);
         logger.info("Entered the product name in the search Field");
         elemUtils.doClick(searchIconBtn);
+        elemUtils.getElement(searchPageHeader).isDisplayed();
         return new ProductsPage(driver);
     }
 

@@ -3,7 +3,8 @@
 
 <suite name="Shop Cart Test automtion regression suite"
        thread-count="3" parallel="tests" verbose="3">
-
+    <parameter name="browser" value="firefox"></parameter>
+    <parameter name="version" value="83"></parameter>
     <listeners>
         <listener
                 class-name="com.qa.opencart.listeners.ExtentReportListener" />

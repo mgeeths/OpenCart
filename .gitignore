@@ -13,6 +13,7 @@ build/
 *.war
 *.ear
 *.nar
+*.png
 hs_err_pid*
 activityLog.log
 OpenCart*.log

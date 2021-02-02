@@ -1,7 +1,7 @@
 package com.qa.opencart.tests;
 
 import com.qa.opencart.baseTest.BaseTest;
-import com.qa.opencart.constants.Constants;
+import com.qa.opencart.utils.Constants;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Shop Cart Test automtion regression suite"
+<suite name="Shop Cart Test automation regression suite"
        thread-count="3" parallel="tests" verbose="3">
     <parameter name="browser" value="firefox"></parameter>
     <parameter name="version" value="83"></parameter>

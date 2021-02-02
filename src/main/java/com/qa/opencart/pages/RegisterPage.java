@@ -1,12 +1,10 @@
 package com.qa.opencart.pages;
 
-import com.qa.opencart.constants.Constants;
+import com.qa.opencart.utils.Constants;
 import com.qa.opencart.utils.ElemUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.nio.DoubleBuffer;
-import java.time.Duration;
 import java.util.Random;
 
 public class RegisterPage {

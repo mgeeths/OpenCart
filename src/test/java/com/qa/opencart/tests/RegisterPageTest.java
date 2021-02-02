@@ -1,12 +1,11 @@
 package com.qa.opencart.tests;
 
 import com.qa.opencart.baseTest.BaseTest;
-import com.qa.opencart.constants.Constants;
+import com.qa.opencart.utils.Constants;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

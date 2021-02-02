@@ -1,7 +1,7 @@
 package com.qa.opencart.tests;
 
 import com.qa.opencart.baseTest.BaseTest;
-import com.qa.opencart.constants.Constants;
+import com.qa.opencart.utils.Constants;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;

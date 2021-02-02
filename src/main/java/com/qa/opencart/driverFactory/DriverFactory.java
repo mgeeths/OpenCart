@@ -110,7 +110,7 @@ public class DriverFactory {
         else{
             throw new Exception ("BrowserException ---- Enter valid browser name");
         }
-        //Use the getDriver method to the tlDriver's copy
+        //Use the getDriver method to get the tlDriver's copy
     return getDriver();
     }
 

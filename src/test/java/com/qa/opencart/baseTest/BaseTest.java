@@ -52,6 +52,7 @@ public class BaseTest {
         if(browserName != null){
             browser = browserName;
         }
+
         driver = df.init_driver(browser, browserVersion);
 
         driver.get(prop.getProperty("url"));

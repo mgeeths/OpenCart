@@ -62,4 +62,6 @@ public class NewAddressPage {
     public void editAddress(){
         System.out.println("Edit the address line 1 data");
     }
+
+
 }

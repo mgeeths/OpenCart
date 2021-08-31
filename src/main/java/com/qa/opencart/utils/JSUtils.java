@@ -9,9 +9,11 @@ import java.util.Properties;
 
 public class JSUtils{
     private WebDriver driver;
+    private JavascriptExecutor js;
 
     public JSUtils(WebDriver driver){
         this.driver = driver;
+        js = ((JavascriptExecutor) driver);
 
     }
 
@@ -25,7 +27,7 @@ public class JSUtils{
     }
 
     private void changeColor(String color, WebElement element) {
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        //JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
 
         try {
@@ -35,7 +37,7 @@ public class JSUtils{
     }
 
     public void drawBorder(WebElement element) {
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        //JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].style.border='3px solid red'", element);
     }
 
@@ -45,7 +47,7 @@ public class JSUtils{
     }
 
     public void clickElementByJS(WebElement element) {
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        //JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].click();", element);
     }
 

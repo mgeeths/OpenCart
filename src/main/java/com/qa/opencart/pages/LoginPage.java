@@ -55,7 +55,10 @@ public class LoginPage {
     }
 
     public NewAddressPage goToNewAddressPage(){
+
         elemUtils.doClick(newAddressLink);
         return new NewAddressPage(driver);
     }
+
+
 }

@@ -37,7 +37,8 @@ public class ElemUtils {
         return element;
     }
 
-    public List<WebElement> getAllElements(By loc){
+    public List<WebElement>
+    getAllElements(By loc){
         return driver.findElements(loc);
     }
 

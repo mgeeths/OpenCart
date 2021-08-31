@@ -23,7 +23,7 @@ public class DriverFactory {
     private WebDriver driver;
     private Properties prop;
     public static String highlight;
-    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+    private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(DriverFactory.class));
     OptionsManager optionsManager;
 
@@ -62,7 +62,7 @@ public class DriverFactory {
         }
         try {
             prop.load(ip);
-            return prop;
+            //return prop;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -121,11 +121,11 @@ public class DriverFactory {
      */
     public String getScreenshot(){
         File src = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
-        String path = System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis() + ".png" ;
-        File destinaton = new File(path);
+        String path = System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis() + ".png";
+        File destination = new File(path);
 
         try {
-            FileUtils.copyFile(src, destinaton);
+            FileUtils.copyFile(src, destination);
         } catch (IOException e) {
             e.printStackTrace();
         }

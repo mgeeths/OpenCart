@@ -27,7 +27,6 @@ public class JSUtils{
     }
 
     private void changeColor(String color, WebElement element) {
-        //JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
 
         try {
@@ -37,17 +36,14 @@ public class JSUtils{
     }
 
     public void drawBorder(WebElement element) {
-        //JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].style.border='3px solid red'", element);
     }
 
     public void generateAlert(String message) {
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("alert('" + message + "')");
     }
 
     public void clickElementByJS(WebElement element) {
-        //JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].click();", element);
     }
 
